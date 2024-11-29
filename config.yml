@@ -1,0 +1,28 @@
+subscriptions:
+  - name: connectivity
+    resources:
+      - name: vwan
+        exclude-from:
+          environments:
+            - dev
+            - test
+          regions:
+            - ukwest
+      - name: vhub
+        exclude-from: {}
+  - name: management
+    resources:
+      - name: bastion
+        exclude-from: {} 
+  - name: identity
+    resources:
+      - name: keyvault
+        exclude-from: {} 
+environments:
+  - dev
+  - test
+  - prod
+
+regions:
+  - uksouth
+  - ukwest
